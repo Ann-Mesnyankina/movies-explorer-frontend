@@ -1,0 +1,131 @@
+.search-form {
+    max-width: 1140px;
+    padding-top: 77px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-bottom: 1px solid #424242;
+    margin: 0 auto;
+    padding-bottom: 70px;
+}
+
+.search-form__input {
+    min-width: 1118px;
+    min-height: 46px;
+    border-radius: 40px;
+    background: #2F2F2F;
+    border: none;
+    padding-left: 22px;
+}
+
+.search-form__container {
+    display: flex;
+    position: relative;
+
+}
+
+.search-form__button {
+    content: '';
+    background-image: url('../../../images/find.svg');
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    top: 5px;
+    right: 5px;
+    width: 34px;
+    height: 34px;
+}
+
+.search-form__button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.search-form__switch-shot-films {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-left: 12px;
+}
+
+.search-form__switch {
+    display: flex;
+    align-items: center;
+    margin-top: 42px;
+}
+
+.search-form__switch-checkbox {
+    display: inline-block;
+    position: relative;
+    width: 36px;
+    height: 20px;
+}
+
+.search-form__switch-input {
+    display: none;
+}
+
+.search-form__switch-circle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transition: .4s;
+    border-radius: 80px;
+    background-color: #343434;
+    cursor: pointer;
+}
+
+.search-form__switch-circle::before {
+    position: absolute;
+    content: '';
+    width: 16px;
+    height: 16px;
+    top: 2px;
+    left: 3px;
+    border-radius: 60%;
+    background-color: white;
+}
+
+.search-form__switch-input:checked+.search-form__switch-circle {
+    background-color: #3DDC84;
+}
+
+.search-form__switch-input:checked+.search-form__switch-circle::before {
+    transform: translateX(14px);
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .search-form__input {
+        min-width: 686px;
+    }
+
+    .search-form {
+        padding-bottom: 62px;
+        max-width: 708px;
+        padding-top: 80px;
+    }
+}
+
+
+@media screen and (min-width: 310px) and (max-width: 767px) {
+    .search-form__input {
+        min-width: 273px;
+        font-size: 11px;
+        padding-left: 19px;
+    }
+
+    .search-form {
+        padding-bottom: 61px;
+        max-width: 292px;
+        padding-top: 80px;
+    }
+
+    .search-form__shot-films {
+        font-size: 11px;
+    }
+}

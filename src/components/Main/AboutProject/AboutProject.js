@@ -12,14 +12,14 @@ export default function AboutProject() {
                     <p className="about-project__description">У каждого этапа был мягкий и жёсткий дедлайн, которые нужно было соблюдать, чтобы успешно защититься.</p>
                 </li>
             </ul>
-            <div className="about-project__execution-time">
-                <div className="about-project__scale">
-                    <p className="about-project__execution-time-beckend">1 неделя</p>
-                    <p className="about-project__execution-time-caption">Back-end</p>
+            <div className="about-project__deadline">
+                <div className="about-project__deadline-scale">
+                    <p className="about-project__deadline-subtitle about-project__deadline-subtitle_color_black">1 неделя</p>
+                    <p className="about-project__deadline-caption">Back-end</p>
                 </div>
-                <div className="about-project__scale">
-                    <p className="about-project__execution-time-frontend">4 недели</p>
-                    <p className="about-project__execution-time-caption">Front-end</p>
+                <div className="about-project__deadline-scale">
+                    <p className="about-project__deadline-subtitle about-project__deadline-subtitle_color_white">4 недели</p>
+                    <p className="about-project__deadline-caption">Front-end</p>
                 </div>
             </div>
         </section>

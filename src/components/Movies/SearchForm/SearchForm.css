@@ -1,6 +1,6 @@
 .search-form {
     max-width: 1140px;
-    padding-top: 77px;
+    padding-top: 60px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -48,7 +48,8 @@
     font-style: normal;
     font-weight: 400;
     line-height: 18px;
-    margin-left: 12px;
+    padding-left: 12px;
+    margin: 0;
 }
 
 .search-form__switch {
@@ -105,7 +106,7 @@
     }
 
     .search-form {
-        padding-bottom: 62px;
+        padding-bottom: 50px;
         max-width: 708px;
         padding-top: 80px;
     }
@@ -120,12 +121,16 @@
     }
 
     .search-form {
-        padding-bottom: 61px;
+        padding-bottom: 50px;
         max-width: 292px;
         padding-top: 80px;
     }
 
-    .search-form__shot-films {
+    .search-form__switch-shot-films {
         font-size: 11px;
+    }
+
+    .search-form__switch {
+        margin-top: 43px;
     }
 }

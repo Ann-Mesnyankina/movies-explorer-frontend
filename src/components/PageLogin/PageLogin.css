@@ -1,4 +1,6 @@
 .login__auth-page {
+    display: flex;
+    flex-direction: column;
     max-width: 396px;
     margin: 0 auto;
     width: 100%;
@@ -6,20 +8,19 @@
 }
 
 .login__form {
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .login__title {
     font-family: Inter;
     font-size: 24px;
     font-weight: 500;
-    line-height: normal;
-    text-align: center;
+    text-align: left;
     color: #FFFFFF;
-    margin: 0 auto;
     padding: 40px 0;
+    margin: 0;
 }
 
 .login__submit-button {
@@ -34,7 +35,15 @@
     width: 100%;
     height: 45px;
     border: none;
-    margin-top: 91px;
+    margin-top: 69px;
+}
+
+.login__link-main {
+    width: 38px;
+}
+
+.login__submit-button-signin {
+    margin-top: 159px;
 }
 
 .login__submit-button:hover {
@@ -53,7 +62,7 @@
     margin-top: 16px;
 }
 
-.login__link:hover {
+.login__link-subtitle:hover {
     cursor: pointer;
     opacity: 0.7;
 }
@@ -70,13 +79,35 @@
     text-decoration: none;
 }
 
+.login__logo {
+    background-image: url(../../images/logo.svg);
+    background-position: center;
+    height: 38px;
+    width: 38px;
+    background-repeat: no-repeat;
+}
+
+.login__logo:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .login__auth-page {
+        padding-top: 232px;
+    }
+}
+
 @media screen and (min-width: 310px) and (max-width: 767px) {
     .login__auth-page {
         max-width: 260px;
+        padding-top: 56px;
+        align-items: center;
     }
 
     .login__title {
-        padding: 50px 0;
+        padding: 50px 0 80px;
+        text-align: center;
     }
 
     .login__link {
@@ -89,4 +120,11 @@
         margin-left: 7px;
     }
 
+    .login__submit-button {
+        margin-top: 157px;
+    }
+
+    .login__submit-button-signin {
+        margin-top: 247px;
+    }
 }

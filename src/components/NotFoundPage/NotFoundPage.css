@@ -1,5 +1,5 @@
 .not-found-page {
-    width: 100%;
+    width: 100vw;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
@@ -8,7 +8,7 @@
 }
 
 .not-found-page__title {
-    min-width: 400px;
+    max-width: 400px;
     color: #FFF;
     text-align: center;
     font-family: Inter;

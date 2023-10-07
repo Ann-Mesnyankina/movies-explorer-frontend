@@ -1,7 +1,7 @@
 .header {
     width: 100%;
     margin: 0 auto;
-    display: flex;    
+    display: flex;
 }
 
 .header__container {
@@ -13,7 +13,7 @@
     margin: 0 auto;
 }
 
-.header_background_color{
+.header_background_dark {
     background: #073042;
 }
 
@@ -25,20 +25,27 @@
     background-repeat: no-repeat;
 }
 
-.header__button-burger{
+.header__logo:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.header__button-burger {
     display: none;
     cursor: pointer;
 }
 
 @media screen and (min-width: 768px) and (max-width: 1270px) {
     .header__container {
-       min-width: 708px;
-    } 
-    
-    .header__button-burger{
+        min-width: 708px;
+    }
+
+    .header__button-burger {
         display: block;
         background-image: url('../../images/burger.svg');
         background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
         width: 44px;
         height: 44px;
     }
@@ -50,12 +57,13 @@
         min-width: 292px;
     }
 
-    .header__button-burger{
+    .header__button-burger {
         display: block;
         background-image: url('../../images/burger.svg');
         background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
         width: 40px;
         height: 43px;
     }
 }
-

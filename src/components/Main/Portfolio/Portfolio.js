@@ -4,14 +4,14 @@ export default function Portfolio() {
             <h3 className="portfolio__title">Портфолио</h3>
 
             <ul className="portfolio__links">
-                <li className="portfolio__list-item"> <a href="https://github.com/Ann-Mesnyankina?tab=repositories" className="portfolio__link" target="_blank" rel="noreferrer">Статичный сайт
-                    <div className="portfolio__arrow"></div></a>
+                <li className="portfolio__list-item">
+                    <a href="https://github.com/Ann-Mesnyankina/how-to-learn" className="portfolio__link" target="_blank" rel="noreferrer">Статичный </a>
                 </li>
-                <li className="portfolio__list-item"><a href="https://github.com/Ann-Mesnyankina?tab=repositories" className="portfolio__link" target="_blank" rel="noreferrer">Адаптивный сайт
-                    <div className="portfolio__arrow"></div></a>
+                <li className="portfolio__list-item">
+                    <a href="https://github.com/Ann-Mesnyankina/russian-travel" className="portfolio__link" target="_blank" rel="noreferrer">Адаптивный сайт</a>
                 </li>
-                <li className="portfolio__list-item"><a href="https://github.com/Ann-Mesnyankina?tab=repositories" className="portfolio__link" target="_blank" rel="noreferrer">Одностраничное приложение
-                    <div className="portfolio__arrow"></div></a>
+                <li className="portfolio__list-item">
+                    <a href="https://github.com/Ann-Mesnyankina/react-mesto-api-full-gha" className="portfolio__link" target="_blank" rel="noreferrer">Одностраничное приложение</a>
                 </li>
             </ul>
         </section>

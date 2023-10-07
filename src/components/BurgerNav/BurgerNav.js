@@ -5,7 +5,7 @@ export default function BurgerNav({ active, setBurgerActive }) {
    
     return (
         <section className={`burger-nav ${active ? 'burger-nav_active' : ''}`}>
-            <div className="burger-nav__content">            
+            <nav className="burger-nav__content">            
                 <button className="burger-nav__button-close" type="button" onClick={() => setBurgerActive(!active)}></button>
                 <ul className="burger-nav__menu">
                     <li><NavLink to="/" className="burger-nav__link">Главная</NavLink></li>
@@ -13,7 +13,7 @@ export default function BurgerNav({ active, setBurgerActive }) {
                     <li><NavLink to="/saved-movies" className="burger-nav__link">Сохранённые фильмы</NavLink></li>
                 </ul>
                 <NavLink to="/profile" className="burger-nav__link burger-nav__link-account"></NavLink>
-            </div>
+            </nav>
             
         </section >
     )

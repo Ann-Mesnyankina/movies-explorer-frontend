@@ -20,6 +20,7 @@
     background-color: #2F2F2F;
     min-height: 46px;
     margin-bottom: 10px;
+    padding-left: 15px;
 }
 
 .login__input:invalid {

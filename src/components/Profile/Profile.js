@@ -33,7 +33,7 @@ export default function Profile() {
             <Header />
             <main className="content">
                 <section className="profile">
-                    <h3 className="profile__title">{`Привет, ${name}!`}</h3>
+                    <h1 className="profile__title">{`Привет, ${name}!`}</h1>
                     <form className="profile__form" id="profile" onSubmit={handleSubmit} noValidate>
                         <div className="profile__container">
                             <label className="profile__input-label">Имя</label>

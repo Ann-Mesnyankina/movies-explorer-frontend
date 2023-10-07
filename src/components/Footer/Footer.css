@@ -30,6 +30,7 @@
     padding: 0;
     margin: 20px 0 20px;
     list-style: none;
+    gap: 20px;
 }
 
 .footer__link {
@@ -41,10 +42,6 @@
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-}
-
-.footer__link-GH {
-    margin-left: 20px;
 }
 
 .footer__copyright {
@@ -95,9 +92,6 @@
       align-items: center;
       text-align: center;
       min-height: 47px;
-    }
-
-    .footer__link-GH {
-        margin: 0;        
+      gap: 12px;
     }
   }

@@ -6,7 +6,7 @@ export default function MoviesCardList({ onLikeMovie, onDeleteMovie, }) {
     const { pathname } = useLocation();
 
     return (
-        <div className="movies-сard">
+        <div className={`movies-сard ${pathname === '/saved-movies' ? 'movies-сard_has-tail' : ''}`}>
             <ul className="movies-сard__list">
                 {initialMovies.map(movie => (
                     <MoviesCard
@@ -16,7 +16,8 @@ export default function MoviesCardList({ onLikeMovie, onDeleteMovie, }) {
                         onDeleteMovie={onDeleteMovie} />
                 ))}
             </ul>
-            {pathname === '/movies' && <button className="movies-сard__button-more" type="button">Ещё</button>}
+            {pathname === '/movies' ? (<button className="movies-сard__button-more" type="button">Ещё</button>
+            ): ''}
         </div>
     );
 }

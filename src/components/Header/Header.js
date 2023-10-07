@@ -11,14 +11,14 @@ export default function Header() {
 
     return (
         <>
-            <header className={`header ${pathname === '/' && 'header_background_color'}`}>
+            <header className={`header ${pathname === '/' && 'header_background_dark'}`}>
                 <div className="header__container" >
-                    <Link to="/"> <div className="header__logo" /></Link>
+                    <Link to="/"><div className="header__logo" /></Link>
                     {pathname === '/' && !loggedIn ? (<AuthMenu />)
                         : (
                             <>
                                 <Navigation />
-                                <div className="header__button-burger" onClick={() => setBurgerMenuActive(!isBurgerMenuActive)} />
+                                <button className="header__button-burger" onClick={() => setBurgerMenuActive(!isBurgerMenuActive)} />
                                 <BurgerNav active={isBurgerMenuActive} setBurgerActive={setBurgerMenuActive} />
                             </>
                         )}

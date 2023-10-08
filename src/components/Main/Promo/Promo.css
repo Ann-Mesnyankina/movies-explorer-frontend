@@ -36,7 +36,7 @@
     width: 319.996px;
     height: 320px;
     background-image: url(../../../images/pic__COLOR_landing-logo.svg);
-    background-size: contain;
+    background-size:contain;
     background-repeat: no-repeat;
     position: absolute;
     top: 82px;
@@ -69,8 +69,8 @@
     .promo__title::before {
         width: 248.005px;
         height: 248.004px;
-        top: 142px;
-        left:26px;
+        top: 141px;
+        left: 26px;
 
     }
 }

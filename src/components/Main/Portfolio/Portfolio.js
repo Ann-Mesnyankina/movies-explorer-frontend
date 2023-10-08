@@ -5,7 +5,7 @@ export default function Portfolio() {
 
             <ul className="portfolio__links">
                 <li className="portfolio__list-item">
-                    <a href="https://github.com/Ann-Mesnyankina/how-to-learn" className="portfolio__link" target="_blank" rel="noreferrer">Статичный </a>
+                    <a href="https://github.com/Ann-Mesnyankina/how-to-learn" className="portfolio__link" target="_blank" rel="noreferrer">Статичный сайт</a>
                 </li>
                 <li className="portfolio__list-item">
                     <a href="https://github.com/Ann-Mesnyankina/russian-travel" className="portfolio__link" target="_blank" rel="noreferrer">Адаптивный сайт</a>

@@ -5,7 +5,7 @@ export default function SearchForm() {
 
     return (
         <form className="search-form" name="search-form" >
-            <div className="search-form__container" htmlFor="switch-checked" >
+            <div className="search-form__container">
                 <input className="search-form__input" placeholder="Фильм" type="text" name="film" id="film" required />
                 <button className="search-form__button" type="submit" ></button>
             </div>

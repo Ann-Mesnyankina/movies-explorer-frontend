@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="footer">
-      <h1 className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</h1>
+      <h2 className="footer__title">Учебный проект Яндекс.Практикум х BeatFilm.</h2>
       <div className="footer__info">
         <p className="footer__copyright">&#169; 2023</p>
         <ul className="footer__list">

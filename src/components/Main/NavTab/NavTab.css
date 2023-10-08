@@ -47,7 +47,7 @@
 
 @media screen and (min-width: 310px) and (max-width: 767px) {
     .nav-tab__link {
-        font-size: 13px;
+        font-size: 11px;
     }
 
     .nav-tab__list {

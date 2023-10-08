@@ -38,7 +38,7 @@ export default function Register() {
             >
                 <Input
                     label='Имя'
-                    type='name'
+                    type='text'
                     name='name'
                     id='name'
                     placeholder='Имя'

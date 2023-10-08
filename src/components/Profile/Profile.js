@@ -39,7 +39,7 @@ export default function Profile() {
                             <label className="profile__input-label">Имя</label>
                             <input className="profile__input"
                                 id="name"
-                                type="name"
+                                type="text"
                                 minLength={2}
                                 maxLength={35}
                                 placeholder="Имя"

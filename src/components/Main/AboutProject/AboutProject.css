@@ -110,6 +110,7 @@
     .about-project {
         max-width: 668px;
         padding-top: 90px;
+        padding-bottom: 90px;
     }
 
     .about-project__item {

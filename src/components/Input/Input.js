@@ -9,6 +9,7 @@ export default function Input({
     value,
     onChange,
     autoComplete,
+    pattern,
 })
  {
     
@@ -26,6 +27,7 @@ export default function Input({
                 value={value}
                 onChange={onChange}
                 autoComplete={autoComplete}
+                pattern={pattern}
                 required
             />
         </>

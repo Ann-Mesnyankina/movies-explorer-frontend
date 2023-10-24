@@ -1,26 +1,49 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 
-export default function MoviesCard({ movie }) {
+export default function MoviesCard({ movie, savedMovies, onDeleteMovie, onLikeMovie }) {
     const { pathname } = useLocation();
     const [isLiked, setIsLiked] = useState(false);
-
-    const {
-        image, nameRU, duration, movieId,
-    } = movie;
+    const imageUrl = `https://api.nomoreparties.co${movie.image.url}`
 
     const cardLikeButtonClassName = `movies-сard__like-button ${isLiked ? 'movies-сard__like-button_active' : null}`;
+    const duration = countDuration(movie.duration)
+
+    useEffect(() => {
+        if (pathname === '/movies') {
+            setIsLiked(savedMovies.some((data) => data.movieId === movie.id))
+        }
+    }, [savedMovies, pathname, movie.id])
+
+    function handleLike() {
+        if (!isLiked && savedMovies.some((data) => data.movieId === movie.id)) {
+            setIsLiked(true)
+            onLikeMovie(movie)
+        } else {
+            setIsLiked(false)
+            onLikeMovie(movie)
+        }
+    }
+
+    function countDuration(duration) {
+        const hours = Math.floor(duration / 60);
+        const min = duration % 60;
+        return hours > 0 ? `${hours}ч ${min}м` : `${min}м`;
+    }
 
     return (
         <>
-            <li className="movies-сard__item" id={movieId} >
-                <img src={image} alt={`шаблон картинки ${nameRU}`} className="movies-сard__image" />
+            <li className="movies-сard__item" id={movie.movieId} >
+                <Link to={movie.trailerLink} target="_blank" rel="noreferrer">
+                    <img src={pathname === '/movies' ? imageUrl : movie.image}
+                        alt={`шаблон картинки ${movie.nameRU}`}
+                        className="movies-сard__image" /></Link>
                 <div className="movies-сard__container-description">
-                    <h2 className="movies-сard__title">{nameRU}</h2>
+                    <h2 className="movies-сard__title">{movie.nameRU}</h2>
                     <p className="movies-сard__duration">{duration}</p>
                 </div>
-                {pathname === '/movies' ? (<button className={cardLikeButtonClassName} type="button" onClick={() => setIsLiked(!isLiked)} />)
-                    : (<button className='movies-сard__remove-button' />)}
+                {pathname === '/movies' ? (<button className={cardLikeButtonClassName} type="button" onClick={handleLike} />)
+                    : (<button className='movies-сard__remove-button' onClick={() => { onDeleteMovie(movie._id) }} />)}
             </li>
         </>
     )

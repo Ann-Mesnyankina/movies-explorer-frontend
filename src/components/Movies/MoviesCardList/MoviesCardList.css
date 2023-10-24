@@ -7,6 +7,23 @@
     padding-bottom: 80px;
     margin: 0 auto;
 }
+.movies-card__text {
+    color: transparent;
+}
+
+.movies-card__text-error{
+    display: flex;
+    max-width: 500px;
+    margin: 50px auto;
+    align-items: center;
+    color: #5b5656;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
 
 .movies-сard__list {
     margin: 0 auto;

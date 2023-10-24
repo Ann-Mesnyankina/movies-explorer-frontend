@@ -66,7 +66,6 @@
 }
 
 .profile__link {
-    margin: 220px auto 0;
     background-color: transparent;
     color: #FFF;
     text-align: center;
@@ -105,16 +104,27 @@
     opacity: 0.8;
 }
 
-.profile__error {
-    color: #FF004C;
+.profile__text{
+    color: transparent;
+    font-size: 11px;
+    text-align: center;
     text-align: center;
     font-family: Inter;
     font-size: 11px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    margin-top: 189px;
-    margin-bottom: 20px;
+    margin-top: 169px;
+    margin-bottom: 10px;
+}
+
+.profile__text-success{
+    text-align: center;
+    color:greenyellow;
+}
+
+.profile__text-error {
+    color: #FF004C;    
 }
 
 .profile__button-save:disabled {

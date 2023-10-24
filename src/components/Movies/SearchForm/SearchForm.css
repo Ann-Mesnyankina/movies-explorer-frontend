@@ -41,6 +41,22 @@
     opacity: 0.8;
 }
 
+.search-form__error{
+    color: transparent;
+    font-family: Inter;
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    min-height: 12px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.search-form__error_active{
+    color: #EE3465;
+}
+
 .search-form__switch-shot-films {
     color: #FFF;
     font-family: Inter;

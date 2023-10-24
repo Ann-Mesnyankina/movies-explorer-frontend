@@ -1,24 +1,13 @@
-export const initialMovies = [
-    {
-        movieId: '111111111',
-        nameRU: 'Баския: Взрыв реальности',
-        trailerLink: 'https://yandex.ru/video/preview/16103640380168558042',
-        duration: '1ч 21м',
-        image: 'https://w.forfun.com/fetch/24/24418c1e4cc00ffab2b667c047a9606e.jpeg',
-    },
-    {
-        movieId: '222222222',
-        nameRU: 'Дженис: Маленькая девочка грустит',
-        trailerLink: 'https://yandex.ru/video/preview/16103640380168558042',
-        duration: '1ч 21м',
-        image: 'https://kirov-portal.ru/upload/original/news/0fd/0fd7539556e128ee420fee4314a11e14.jpg',
-    },
-    {
-        movieId: '3333333333',
-        nameRU: 'В погоне за Бенкси',
-        trailerLink: 'https://yandex.ru/video/preview/16103640380168558042',
-        duration: '1ч 21м',
-        image: 'https://media.filmz.ru/photos/full/filmz.ru_f_181163.jpg',
-    },
-];
+const MAXWIDTH_1280 = 1280;
+const MAXWIDTH_768 = 768;
+const DOWNLOAD_1280= 12;
+const DOWNLOAD_768= 8;
+const DOWNLOAD_320= 5;
+const ADDMORE_1280= 3;
+const ADDMORE_768= 2;
+const ADDMORE_320= 2;
 
+const NAME_REGEX = '/^[a-zA-Z-]+$/';
+const EMAIL_REGEX = '^\\w+([\\.]?\\w+)*@\\w+([\\.]?\\w+)*(\\.\\w{2,3})+$'
+
+export{NAME_REGEX,EMAIL_REGEX, MAXWIDTH_1280,MAXWIDTH_768,DOWNLOAD_1280,DOWNLOAD_768,DOWNLOAD_320,ADDMORE_1280,ADDMORE_768,ADDMORE_320}

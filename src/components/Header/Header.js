@@ -4,10 +4,9 @@ import AuthMenu from "../AuthMenu/AuthMenu";
 import { useState } from "react";
 import BurgerNav from "../BurgerNav/BurgerNav";
 
-export default function Header() {
+export default function Header({loggedIn}) {
     const [isBurgerMenuActive, setBurgerMenuActive] = useState(false)
     const { pathname } = useLocation();
-    const { loggedIn } = useState(false);
 
     return (
         <>

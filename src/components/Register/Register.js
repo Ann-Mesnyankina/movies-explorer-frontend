@@ -2,7 +2,7 @@ import React from 'react';
 import PageLogin from '../PageLogin/PageLogin';
 import Input from '../Input/Input';
 import {
-    EMAIL_REGEX
+    EMAIL_REGEX, NAME_REGEX
 } from "../../utils/constans";
 
 export default function Register({ onRegister, setError }) {
@@ -85,6 +85,7 @@ export default function Register({ onRegister, setError }) {
                     value={password || ''}
                     onChange={handleChangePassword}
                     autoComplete="off"
+                    pattern={NAME_REGEX}
                     required
                 />
                 <span className="login__error" id="password-error">{errorMessage.password}</span>

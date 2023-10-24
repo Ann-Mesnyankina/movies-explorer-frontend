@@ -27,8 +27,9 @@ function App() {
   const path = location.pathname
 
   useEffect(() => {
-    if (loggedIn) {
-      Promise.all([mainApi.getSavedMovies(localStorage.jwt), mainApi.getInfoUser(localStorage.jwt)])
+    const token = localStorage.getItem('jwt')
+    if (token) {
+      Promise.all([mainApi.getSavedMovies(localStorage.jwt), mainApi.getInfoUser(localStorage.jwt)])      
         .then(([infoMovie, infoUser]) => {
           setCurrentUser(infoUser.data)
           setSavedMovies(infoMovie.data)
@@ -43,23 +44,25 @@ function App() {
 
   useEffect(() => {
     if (localStorage.jwt) {
-      mainApi.getUserToken(localStorage.jwt)
+      mainApi.getUserToken(localStorage.jwt)     
         .then(() => {
-          setLoggedIn(true)
-          transfer(path);
+          setLoggedIn(true)          
         })
         .catch((error => console.error(`Не получилось авторизоваться повторно ${error}`)))
     } else {
       setLoggedIn(false)
     }
-  }, [])
+  }, [loggedIn])
+
+  useEffect(()=>{
+    transfer(path);
+  },[path,transfer])
 
   function handleRegister(data) {
     mainApi.registration(data)
       .then(() => {
         setLoggedIn(true)
         handleAuthorize(data)
-
       })
       .catch((error) => {
         setError(true)

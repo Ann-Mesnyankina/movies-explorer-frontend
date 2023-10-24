@@ -1,4 +1,4 @@
-class MoviesApi {
+ class MoviesApi {
     constructor(setting) {
         this._baseUrl = setting.baseUrl;
     }

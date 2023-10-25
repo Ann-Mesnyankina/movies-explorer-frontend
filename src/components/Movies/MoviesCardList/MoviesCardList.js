@@ -30,7 +30,7 @@ export default function MoviesCardList({ movies, onDeleteMovie, savedMovies, isE
             return()=> window.removeEventListener('resize', moviesResize);
         }
 
-    }, [pathname, moviesResize]);
+    }, [pathname, moviesResize,movies]);
 
     function addMoviesByButton() {
         const width = window.innerWidth;

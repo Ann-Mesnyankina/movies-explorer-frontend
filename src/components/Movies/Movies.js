@@ -37,8 +37,8 @@ export default function Movies({ savedMovies, setError, setErrorServer, isErrorS
         }
     }, [setSearchInput, filtered])
 
-    function findMovies(searchInput, allMovies) {
-        if (!allMovies) {
+    function findMovies(searchInput) {
+        if (!localStorage.allMovies) {
             setPreloader(true)
             moviesApi.getInitialMovies()
                 .then((data) => {
@@ -79,6 +79,7 @@ export default function Movies({ savedMovies, setError, setErrorServer, isErrorS
                         findMovies={findMovies}
                         isCheckShotMovie={isCheckShotMovie}
                         setCheckboxShortMovies={setCheckboxShortMovies}
+                        searchInput={searchInput}
                     />
                     <MoviesCardList
                         movies={isFiltredMovie}

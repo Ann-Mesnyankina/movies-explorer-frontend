@@ -55,8 +55,12 @@ function App() {
   }, [loggedIn])
 
   useEffect(()=>{
+    if(localStorage.jwt){
     transfer(path);
-  },[path,transfer])
+    }else{
+      transfer('/'); 
+    }
+  },[])
 
   function handleRegister(data) {
     mainApi.registration(data)
@@ -167,9 +171,9 @@ function App() {
                   isErrorServer={isErrorServer} />}
               />
               <Route path="/signup" element={<Register
-                onRegister={handleRegister} setError={setError} />} />
+                onRegister={handleRegister} setError={setError} loggedIn={loggedIn}/>} />
               <Route path="/signin" element={<Login
-                onLogin={handleAuthorize} setError={setError} />} />
+                onLogin={handleAuthorize} setError={setError} loggedIn={loggedIn}/>} />
               <Route path="*" element={<NotFoundPage />} />
             </Routes>
         </ErrorContext.Provider>

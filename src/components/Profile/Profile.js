@@ -12,6 +12,7 @@ export default function Profile({ onSubmitProfile, setLoggedIn, isAchieve, setAc
     const [isEditProfile, setIsEditProfile] = React.useState(false);
     const currentUser = useContext(CurrentUserContext);
     const { values, handleChange, isValid, resetForm } = useFormWithValidation();
+    const isCheckCurrentData = values.name !== currentUser.name || values.email !== currentUser.email
 
     useEffect(() => {
         resetForm({ name: currentUser.name, email: currentUser.email })
@@ -90,7 +91,7 @@ export default function Profile({ onSubmitProfile, setLoggedIn, isAchieve, setAc
                             </>
                         ) : (
                             <>
-                                <button className="profile__button-save" disabled={!isValid || isErrorServer} form="profile" type="submit">Сохранить</button>
+                                <button className="profile__button-save" disabled={!isValid || isErrorServer||!isCheckCurrentData} form="profile" type="submit">Сохранить</button>
                             </>)
                         }
                     </form>

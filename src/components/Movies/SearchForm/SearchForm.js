@@ -1,10 +1,20 @@
-import { useContext } from "react"
+import { useContext, useEffect } from "react"
 import { useFormWithValidation } from "../../../utils/hooks/formValid";
 import { ErrorContext } from "../../../contexts/ErrorContext";
+import { useLocation } from "react-router-dom";
 
-export default function SearchForm({ findMovies, setError,setCheckboxShortMovies,isCheckShotMovie }) {
-    const { values, handleChange } = useFormWithValidation();
+export default function SearchForm({ findMovies, setError, setCheckboxShortMovies, isCheckShotMovie, searchInput }) {
+    const { values, handleChange, resetForm } = useFormWithValidation();
     const isError = useContext(ErrorContext)
+    const { pathname } = useLocation();
+
+    useEffect(() => {
+        if (pathname === '/movies') {
+            resetForm({ film: searchInput })
+        } else {
+            resetForm({ film: '' })
+        }
+    }, [resetForm, searchInput, pathname]);
 
     function handleSubmit(evt) {
         evt.preventDefault();
@@ -28,8 +38,9 @@ export default function SearchForm({ findMovies, setError,setCheckboxShortMovies
             <div className="search-form__switch">
                 <label className="search-form__switch-checkbox">
                     <input className="search-form__switch-input" type="checkbox" id="checkbox" checked={isCheckShotMovie} onChange={() => {
-                        setCheckboxShortMovies()}
-                        } />
+                        setCheckboxShortMovies()
+                    }
+                    } />
                     <span className="search-form__switch-circle"></span>
                 </label>
                 <label className="search-form__switch-shot-films" htmlFor="checkbox">Короткометражки</label>

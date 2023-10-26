@@ -18,7 +18,7 @@ export default function Movies({ savedMovies, setError, setErrorServer, isErrorS
         localStorage.setItem('shortCheck', JSON.stringify(isCheckShotMovie));
         localStorage.setItem('keyword', JSON.stringify(searchInput));
         setFiltredMovie(movies.filter((item) => {
-            const findByName = item.nameRU.toLowerCase().includes(searchInput) ||
+            const findByName = item.nameRU.toLowerCase().includes(searchInput.toLowerCase()) ||
                 item.nameEN.toLowerCase().includes(searchInput.toLowerCase())
             return isCheckShotMovie ? (findByName && item.duration <= 40) : findByName
         }))

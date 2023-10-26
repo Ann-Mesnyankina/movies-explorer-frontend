@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 
 export default function MoviesCard({ movie, savedMovies, onDeleteMovie, onLikeMovie }) {
     const { pathname } = useLocation();
@@ -34,10 +34,10 @@ export default function MoviesCard({ movie, savedMovies, onDeleteMovie, onLikeMo
     return (
         <>
             <li className="movies-сard__item" id={movie.movieId} >
-                <Link to={movie.trailerLink} target="_blank" rel="noreferrer">
+                <NavLink to={movie.trailerLink} target="_blank" rel="noreferrer">
                     <img src={pathname === '/movies' ? imageUrl : movie.image}
                         alt={`шаблон картинки ${movie.nameRU}`}
-                        className="movies-сard__image" /></Link>
+                        className="movies-сard__image" /></NavLink>
                 <div className="movies-сard__container-description">
                     <h2 className="movies-сard__title">{movie.nameRU}</h2>
                     <p className="movies-сard__duration">{duration}</p>

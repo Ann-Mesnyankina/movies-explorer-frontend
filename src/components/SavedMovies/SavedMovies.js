@@ -11,7 +11,7 @@ export default function SavedMovies({ savedMovies, onDeleteMovie, setError }) {
 
     const filtered = useCallback((isCheckShotMovie, movies, searchInput) => {
         setFiltredMovie(movies.filter((item) => {
-            const findByName = item.nameRU.toLowerCase().includes(searchInput) ||
+            const findByName = item.nameRU.toLowerCase().includes(searchInput.toLowerCase()) ||
                 item.nameEN.toLowerCase().includes(searchInput.toLowerCase())
             return isCheckShotMovie ? (findByName && item.duration <= 40) : findByName
         }))

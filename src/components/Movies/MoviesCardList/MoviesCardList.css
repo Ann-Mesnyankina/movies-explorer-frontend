@@ -1,0 +1,104 @@
+.movies-сard {
+    width: 100%;
+    max-width: 1140px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+}
+.movies-card__text {
+    color: transparent;
+}
+
+.movies-card__text-error{
+    display: flex;
+    max-width: 500px;
+    margin: 50px auto;
+    align-items: center;
+    color: #5b5656;
+    text-align: center;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.movies-сard__list {
+    margin: 0 auto;
+    padding: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: repeat(3, 364px);
+    column-gap: 24px;
+    row-gap: 37px;
+}
+
+.movies-сard__button-more {
+    min-width: 1140px;
+    margin: 0 auto;
+    border-radius: 6px;
+    background: #2F2F2F;
+    margin-top: 50px;
+    height: 36px;
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    border: none;
+}
+
+.movies-сard__button-more:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.movies-сard_has-tail{
+    padding-bottom: 247px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .movies-сard {
+        max-width: 706px;
+    }
+
+    .movies-сard__list {
+        grid-template-columns: repeat(2, 339px);
+        column-gap: 30px;
+        row-gap: 30px;
+    }
+
+    .movies-сard__button-more {
+        min-width: 708px;
+        margin-top: 80px;
+    }
+
+    .movies-сard_has-tail{
+        padding-bottom: 170px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .movies-сard {
+        padding-bottom: 80px;
+        padding-top: 40px;
+    }
+
+    .movies-сard__list {
+        grid-template-columns: 300px;
+        gap: 14px;
+    }
+
+    .movies-сard__button-more {
+        min-width: 300px;
+        margin-top: 76px;
+    }
+
+    .movies-сard_has-tail{
+        padding-bottom: 166px;
+    }
+}

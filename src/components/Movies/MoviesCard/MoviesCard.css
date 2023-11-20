@@ -1,0 +1,163 @@
+.movies-сard__item {
+    max-width: 364px;
+    border-radius: 6px;
+    background: #222;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.08);
+    position: relative;
+}
+
+.movies-сard__item:hover {
+    cursor: pointer;
+}
+
+.movies-сard__image {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+    width: 364px;
+    height: 203px;
+    object-fit: cover;
+}
+
+.movies-сard__container-description {
+    display: flex;
+    flex-direction: column;
+    max-width: 274px;
+    padding: 16px 16px;
+}
+
+.movies-сard__title {
+    margin: 0;
+    color: #FFF;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.movies-сard__duration {
+    color: #8B8B8B;
+    font-family: Inter;
+    font-size: 11px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin: 0;
+    padding-top: 17px;
+}
+
+.movies-сard__like-button {
+    position: absolute;
+    background-image: url('../../../images/like-none.svg');
+    background-color: transparent;
+    background-position: center;
+    padding: 0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    bottom: 39px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.movies-сard__like-button_active {
+    background-image: url('../../../images/like-color.svg');
+    background-color: transparent;
+    background-position: center;
+    padding: 0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    bottom: 39px;
+    right: 16px;
+}
+
+.movies-сard__like-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.movies-сard__remove-button {
+    background-image: url('../../../images/remove.svg');
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 0;
+    border: none;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 39px;
+    right: 16px;
+    cursor: pointer;
+}
+
+.movies-сard__remove-button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+    .movies-сard__item {
+        max-width: 339px;
+    }
+
+    .movies-сard__image {
+        width: 339px;
+        height: 190px;
+    }
+
+    .movies-сard__container-description {
+        padding: 14px 14px;
+        max-width: 246px;
+    }
+
+    .movies-сard__duration {
+        padding-top: 15px;
+    }
+
+    .movies-сard__like-button {
+        bottom: 34px;
+        right: 14px;
+    }
+
+    .movies-сard__remove-button {
+        bottom: 34px;
+        right: 14px;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    .movies-сard__item {
+        max-width: 300px;
+    }
+
+    .movies-сard__image {
+        width: 300px;
+        height: 168px;
+    }
+
+    .movies-сard__container-description {
+        padding: 14px 14px;
+        max-width: 226px;
+    }
+
+    .movies-сard__title {
+        font-size: 12px;
+    }
+
+    .movies-сard__duration {
+        padding-top: 14px;
+        font-size: 10px;
+    }
+
+    .movies-сard__like-button {
+        bottom: 32px;
+        right: 10px;
+    }
+
+    .movies-сard__remove-button {
+        bottom: 32px;
+        right: 10px;
+    }
+}
